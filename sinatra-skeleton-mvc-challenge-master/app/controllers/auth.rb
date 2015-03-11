@@ -1,10 +1,10 @@
-get '/login' do
+get '/' do
   erb :'users/login'
 end
 
 post '/login' do
   @user = User.find_by(email: params[:email])
-  
+
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
     redirect '/'

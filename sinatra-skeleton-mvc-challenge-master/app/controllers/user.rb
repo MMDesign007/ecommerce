@@ -4,7 +4,7 @@ get '/users' do
 end
 
 get '/users/new' do
-  erb :'users/new'
+  erb :'users/_signup', layout: false
 end
 
 post '/users' do
